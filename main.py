@@ -280,7 +280,8 @@ def run_style_transfer(content_path,
     return filenames
 
 
-def create_gif(content_path, style_paths, num_iterations_per_style=500, output="outupt", frames_per_style=10, frametime=0.5, loop=True):
+def create_gif(content_path, style_paths, num_iterations_per_style=500, output="outupt", frames_per_style=10,
+               frametime=0.5, loop=True):
     """
     This function creates a gif of a image with style/styles applied to it
     :param content_path: Image to apply style/styles to
@@ -300,8 +301,7 @@ def create_gif(content_path, style_paths, num_iterations_per_style=500, output="
     img = img.resize((round(img.size[0] * scale), round(img.size[1] * scale)), Image.ANTIALIAS)
     images.append(img)
 
-
-    style = 0;
+    style = 0
     for style_path in style_paths:
         print("Style: {}".format(style_path))
         filenames = run_style_transfer(content_path,
@@ -319,16 +319,16 @@ def create_gif(content_path, style_paths, num_iterations_per_style=500, output="
         images = images + images[::-1]
 
     print("Style transfer done, creating the gif")
-    #imageio.mimsave('{}.gif'.format(output), images, duration=frametime)
     images[0].save('{}.gif'.format(output),
-               save_all=True,
-               append_images=images[1:],
-               duration=frametime,
-               loop=0)
+                   save_all=True,
+                   append_images=images[1:],
+                   duration=frametime,
+                   loop=0)
 
 
 if __name__ == "__main__":
     content_path = 'turtle.jpg'
     style_paths = ['styles/skrik.jpg', 'styles/starry_night.jpg']
 
-    create_gif(content_path, style_paths, num_iterations_per_style=100, output="turtle", frametime=100, frames_per_style=25)
+    create_gif(content_path, style_paths, num_iterations_per_style=300, output="turtle", frametime=100,
+               frames_per_style=25)

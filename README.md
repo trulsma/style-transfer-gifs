@@ -13,7 +13,7 @@ Code
 content_path = 'turtle.jpg'
 style_paths = ['styles/skrik.jpg', 'styles/starry_night.jpg']
 
-create_gif(content_path, style_paths, num_iterations_per_style=100, output="turtle", frametime=100, frames_per_style=25)
+create_gif(content_path, style_paths, num_iterations_per_style=300, output="turtle", frametime=100, frames_per_style=25)
 ```
 
 Content image
