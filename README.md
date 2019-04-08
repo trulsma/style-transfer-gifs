@@ -35,7 +35,7 @@ Style image 2
 Switch 
 ```content_path = '{your image here}'``` to use a different content image
 
-Switch ```style_paths = ['style1', .. more styles if you want]``` to use your style images
+Switch ```style_paths = ['{style image}', .. more styles if you want]``` to use your style images
 
 Switch ```create_gif(content_path, style_paths, num_iterations_per_style={iterations}, output="{output file}", frametime={time per frame in ms}, frames_per_style={number of styles per frame})```
 
