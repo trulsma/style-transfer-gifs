@@ -1,6 +1,6 @@
 
 ## Style transfer gifs
-Create gifs of a image transitioning between different styles
+Create gifs of images transitioning between different styles
 
 ### Example
 
